@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.jevonaverill.eventku">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo64"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="com.jevonaverill.eventku.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.jevonaverill.eventku.LoginPageActivity" />
+        <activity android:name="com.jevonaverill.eventku.RegisterPageActivity" />
+        <activity
+            android:name="com.jevonaverill.eventku.DetailEventPageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.jevonaverill.eventku.SplashScreenActivity"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name="com.jevonaverill.eventku.EditProfileActivity"
+            android:exported="false"
+            android:parentActivityName="com.jevonaverill.eventku.MainActivity" />
+        <activity
+            android:name="com.jevonaverill.eventku.CreateEventActivity"
+            android:exported="false"
+            android:parentActivityName="com.jevonaverill.eventku.MainActivity" />
+
+        <service android:name="com.jevonaverill.eventku.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="0d2766dad442efd643566ef0e85ab78673014fe8" />
+        <meta-data
+            android:name="firebase_performance_logcat_enabled"
+            android:value="true" />
+
+        <activity
+            android:name="com.jevonaverill.eventku.DetailEventThreadPageActivity"
+            android:exported="false"
+            android:parentActivityName="com.jevonaverill.eventku.DetailEventPageActivity"></activity>
+    </application>
+
+</manifest>

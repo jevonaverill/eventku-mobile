@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="3dp"
+    android:background="@drawable/border_box"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/commentHostedByImg"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@mipmap/ic_launcher" />
+
+        <com.jevonaverill.tools.CaviarTextView
+            android:id="@+id/commentHostedByName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toEndOf="@+id/commentHostedByImg"
+            android:text="Hans" />
+
+        <com.jevonaverill.tools.CaviarTextView
+            android:id="@+id/commentContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/commentHostedByName"
+            android:layout_marginLeft="5dp"
+            android:layout_toEndOf="@+id/commentHostedByImg"
+            android:text="Lorem Ipsun Dolor si amet" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/commentHostedByImg"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp">
+
+            <com.jevonaverill.tools.CaviarTextView
+                android:id="@+id/commentTotalLike"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="4dp"
+                android:layout_marginTop="4dp"
+                android:text="20"
+                android:textSize="12dp" />
+
+            <ImageView
+                android:id="@+id/likeIconInCommentCard"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/like" />
+
+            <com.jevonaverill.tools.CaviarTextView
+                android:id="@+id/likeTextInCommentCard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="3dp"
+                android:text="Like"
+                android:textSize="12dp" />
+
+            <com.jevonaverill.tools.CaviarTextView
+                android:id="@+id/commentDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="October 11 at 11.21 PM"
+                android:textSize="12dp" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>

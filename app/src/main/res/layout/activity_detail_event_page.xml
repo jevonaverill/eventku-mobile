@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.jevonaverill.eventku.DetailEventPageActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/detailEventPosterImage"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:layout_alignParentStart="true"
+                android:scaleType="fitXY" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:background="#73000000" />
+
+            <com.jevonaverill.tools.CaviarTextView
+                android:id="@+id/rsvpTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="11dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/border_box_white"
+                android:padding="2dp"
+                android:text="RSVP"
+                android:textColor="@android:color/white"
+                android:textSize="24dp" />
+
+            <com.jevonaverill.tools.CaviarTextView
+                android:id="@+id/textViewDetailEventTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/linearLayoutDetailTop"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp"
+                android:text="Title"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:id="@+id/linearLayoutDetailTop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/linearLayoutCalendar"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="5dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:background="@drawable/multiple_user" />
+
+                    <com.jevonaverill.tools.CaviarTextView
+                        android:id="@+id/detailEventTotalPeople"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:text="8 Going"
+                        android:textColor="@android:color/white" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="30dp">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:background="@drawable/four_black_squares" />
+
+                    <com.jevonaverill.tools.CaviarTextView
+                        android:id="@+id/detailEventCategory"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Music"
+                        android:textColor="@android:color/white" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutDetailShareEvent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingLeft="25dp"
+                    android:paddingRight="25dp">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:background="@drawable/share_logo" />
+
+                    <com.jevonaverill.tools.CaviarTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:text="Share"
+                        android:textColor="@android:color/white" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayoutCalendar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/detailEventPosterImage"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                android:paddingLeft="28dp"
+                android:paddingRight="28dp">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginTop="1dp"
+                    android:background="@drawable/calendar_and_clock_black" />
+
+                <com.jevonaverill.tools.CaviarTextView
+                    android:id="@+id/detailEventDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Monday, November 9 at 10.30 PM" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayoutLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/linearLayoutCalendar"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                android:paddingLeft="25dp"
+                android:paddingRight="25dp">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="2dp"
+                    android:background="@drawable/placeholder" />
+
+                <com.jevonaverill.tools.CaviarTextView
+                    android:id="@+id/detailEventLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Graha Niaga Thamrin" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayoutHostedBy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/linearLayoutLocation"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                android:paddingLeft="25dp"
+                android:paddingRight="25dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/detailEventHostedByImg"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="2dp"
+                    android:src="@drawable/add_blue" />
+
+                <com.jevonaverill.tools.CaviarTextView
+                    android:id="@+id/detailEventHostedByText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Hosted By" />
+            </LinearLayout>
+
+            <com.jevonaverill.tools.CaviarTextView
+                android:id="@+id/textViewDetailEventDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/linearLayoutHostedBy"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="25dp"
+                android:paddingRight="25dp"
+                android:text="Description"
+                android:textSize="16sp" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recViewThreadInDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textViewDetailEventDescription">
+
+            </android.support.v7.widget.RecyclerView>
+
+            <EditText
+                android:id="@+id/editTextNewThread"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/recViewThreadInDetail"
+                android:layout_marginBottom="30dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/rounded_corner_post_comment"
+                android:hint="Write a new thread..."
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

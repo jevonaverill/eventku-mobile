@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">EventKu</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="category_prompt">Choose Category</string>
+
+    <string-array name="event_category">
+        <item>Entertainment</item>
+        <item>Study</item>
+        <item>Sport</item>
+    </string-array>
+</resources>

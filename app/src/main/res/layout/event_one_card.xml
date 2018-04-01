@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="3dp"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="5dp">
+
+    <RelativeLayout
+        android:id="@+id/relativeEventCard"
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+        <ImageView
+            android:id="@+id/eventCardImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#99000000" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/eventCardHostedImg"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/ic_menu_camera" />
+
+        <com.jevonaverill.tools.CaviarTextView
+            android:id="@+id/eventCardHostedBy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/eventCardHostedImg"
+            android:layout_marginTop="8dp"
+            android:layout_toEndOf="@+id/eventCardHostedImg"
+            android:text="Hosted By Hans"
+            android:textColor="#fff"
+            android:textSize="18dp" />
+
+        <com.jevonaverill.tools.CaviarTextView
+            android:id="@+id/eventCardTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/eventCardLocation"
+            android:layout_alignStart="@+id/eventCardHostedImg"
+            android:layout_marginLeft="25dp"
+            android:layout_marginStart="13dp"
+            android:text="Taylor Swift Tour"
+            android:textColor="#fff"
+            android:textSize="26dp" />
+
+        <com.jevonaverill.tools.CaviarTextView
+            android:id="@+id/eventCardLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/eventCardCategory"
+            android:layout_alignStart="@+id/eventCardTitle"
+            android:layout_marginBottom="8dp"
+            android:text="Location"
+            android:textColor="#fff"
+            android:textSize="18dp" />
+
+        <com.jevonaverill.tools.CaviarTextView
+            android:id="@+id/eventCardDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignStart="@+id/eventCardLocation"
+            android:layout_marginBottom="10dp"
+            android:text="2017"
+            android:textColor="#fff"
+            android:textSize="18dp" />
+
+        <com.jevonaverill.tools.CaviarTextView
+            android:id="@+id/eventCardCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/eventCardDate"
+            android:layout_alignBottom="@+id/eventCardDate"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="18dp"
+            android:text="Category"
+            android:textColor="#fff"
+            android:textSize="20dp" />
+
+    </RelativeLayout>
+
+
+</android.support.v7.widget.CardView>

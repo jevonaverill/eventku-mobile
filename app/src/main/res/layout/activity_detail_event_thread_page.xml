@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp"
+    tools:context="com.jevonaverill.eventku.DetailEventThreadPageActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/detailEventThreadHostedByImg"
+                android:layout_width="60dp"
+                android:layout_height="60dp" />
+
+            <com.jevonaverill.tools.CaviarTextView
+                android:id="@+id/detailEventThreadHostedByName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_toEndOf="@+id/detailEventThreadHostedByImg"
+                android:text="Hans" />
+
+            <com.jevonaverill.tools.CaviarTextView
+                android:id="@+id/detailEventThreadDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/detailEventThreadHostedByName"
+                android:layout_marginLeft="15dp"
+                android:layout_toEndOf="@+id/detailEventThreadHostedByImg"
+                android:text="Yesterday" />
+
+            <com.jevonaverill.tools.CaviarTextView
+                android:id="@+id/detailEventThreadContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/detailEventThreadHostedByImg"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:text="lorem ipsun dolor si amet test test ?" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recViewDetailEventThreadComment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/detailEventThreadContent">
+
+            </android.support.v7.widget.RecyclerView>
+
+            <EditText
+                android:id="@+id/editTextCommentPost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/recViewDetailEventThreadComment"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/rounded_corner_post_comment"
+                android:hint="Write a reply..."
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>
